@@ -425,7 +425,6 @@ int main()
 
     if (filaDadosSensor != NULL)
     {
-        // Criação das tarefas em ordem diferente
         xTaskCreate(tarefaLedsRgb, "RGB LEDs", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY, NULL);
         xTaskCreate(tarefaBuzzer, "Alarme", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY, NULL);
         xTaskCreate(tarefaMatrizLed, "Matriz LED", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY, NULL);
